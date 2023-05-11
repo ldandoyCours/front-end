@@ -1,0 +1,62 @@
+@import 'params';
+
+body {
+    background-color: $light;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        padding-bottom: 10px;
+    }
+}
+
+.btnhover {
+    background-color: $lightgreen;
+    cursor: pointer;
+    border: 0;
+    padding: 10px;
+
+    &:hover {
+        color: $red;
+        background-color: $darkgreen;
+        transition: background-color 1000ms linear;
+        transition: color 1000ms linear;
+    }
+}
+
+.btn {
+    background: none;
+    border: 2px solid $darkgreen;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    cursor: pointer;
+    transform: color 0.4s linear;
+    position: relative;
+
+    &:hover {
+        color: $light;
+
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $darkgreen;
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    }
+}

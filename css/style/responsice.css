@@ -1,0 +1,25 @@
+button {
+    background: lightcoral;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+    transition: linear 5s;
+}
+
+@media (max-width: 650px) {
+    button {
+        background-color: lightgreen;
+    }
+}
+
+@media (min-width: 1000px) {
+    button {
+        background-color: lightskyblue;
+    }
+}
